@@ -32,6 +32,7 @@ extension PDFViewTypes on PDF {
   Widget cachedFromUrl(
     String url, {
     Key? key,
+    String? cacheKey,
     PlaceholderWidget placeholder = downloadIndicator,
     DownloadingErrorWidget errorWidget = errorWidgetHolder,
     Map<String, String>? headers,
@@ -44,6 +45,7 @@ extension PDFViewTypes on PDF {
       key: key,
       pdf: this,
       url: url,
+      cacheKey: cacheKey,
       placeholder: placeholder,
       errorWidget: errorWidget,
       headers: headers,
